@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Temperature API</title>
+    <link rel="stylesheet" href="TemperatureStyle.css" />
+</head>
+
+<body>
+
+    <h1>Search for Temperature by Zip Code</h1>
+
+    <label>Enter Zip Code:</label>
+    <input type="text" id="zipcode" />
+
+    <br><br>
+
+    <label>Select Temperature Measurement:</label>
+
+    <input type="radio" name="tempType" value="fahrenheit" /> Fahrenheit
+    <input type="radio" name="tempType" value="celsius" /> Celsius
+
+    <br><br>
+
+    <button onclick="performSearch()">Search</button>
+
+    <h2 id="result"></h2>
+
+    <script src="apiController.js"></script>
+
+</body>
+
+</html>
