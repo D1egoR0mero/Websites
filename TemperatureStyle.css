@@ -123,6 +123,7 @@ footer p {
     cursor: pointer;
     border-radius: 2px;
     position: relative;
+    width: 100px;
 
 }
 

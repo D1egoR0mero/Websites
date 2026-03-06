@@ -27,6 +27,6 @@ weeklySearchForm.addEventListener('submit', (event) => {
 
     // Redirect with query parameters
     const tempType = tempCheck.value;
-    window.location.href = `weeklyForcast.html?zip=${zip}&temp=${tempType}`;
+    window.location.href = `weeklyForecast.html?zip=${zip}&temp=${tempType}`;
 
 });

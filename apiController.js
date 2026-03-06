@@ -57,7 +57,8 @@ async function performWeeklySearch() {
     const zipCode = params.get('zip');
     const tempType = params.get('temp');
 
-    console.log(zipCode, tempType);
+    document.getElementById("forecastTitle").innerText =
+        "Weekly Forecast Results for " + zipCode;
     try {
         let searchURL = "";
 
