@@ -23,8 +23,13 @@ header {
     padding: 20px;
     border-bottom: 3px solid #66ccff;
     /* subtle accent line */
+
+
 }
 
+header table {
+    width: 100%;
+}
 
 header h1 {
     color: white;
@@ -97,38 +102,38 @@ footer p {
 
 .menu {
     float: right;
+    position: relative;
 
 }
 
 .cloud {
     float: left;
-    font-size: 40px;
+    font-size: 60px;
 }
 
-.menu button {
+
+
+.menu-button {
     background-color: #8d9195;
     color: #f0f8ff;
-    padding: 10px 15px;
+    padding: 5px 5px;
     border: none;
-    font-size: 15px;
-    text-align: right;
+    font-size: 40px;
+    text-align: center;
     cursor: pointer;
     border-radius: 2px;
-
+    position: relative;
 
 }
 
-.menu i {
-    font-size: 25px;
-    border-color: #000000;
-    border: 10px;
-}
 
 .option {
     display: none;
     position: absolute;
     right: 0;
     background-color: white;
+    width: 100px;
+    text-align: center;
     padding: 10px 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 15px
@@ -159,9 +164,59 @@ footer p {
     height: 40px;
     font-size: 20px;
     cursor: pointer;
+    text-align: center;
 }
 
 .searchButton:hover {
     background-color: #003366;
 
+}
+
+/* Weekly Forecast Table */
+.resultTable {
+    width: 100%;
+    border-collapse: collapse;
+    /* Remove double borders */
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.resultTable th,
+.resultTable td {
+    border: 1px solid #003366;
+    /* dark blue borders */
+    padding: 10px;
+    font-size: 16px;
+}
+
+.resultTable th {
+    background-color: #003366;
+    color: #ffffff;
+}
+
+
+
+
+
+/* Dialog close button */
+#weeklySearch #closeButton {
+    background-color: #8d9195;
+    color: #ffffff;
+    border: gray;
+    border: 2px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    /* float to the right inside the dialog */
+}
+
+#weeklySearch #closeButton:hover {
+    background-color: #606265;
+    /* lighter blue on hover */
+    color: white;
 }

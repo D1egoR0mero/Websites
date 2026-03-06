@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Temperature API</title>
+    <title>Weekly Forecast</title>
     <link rel="stylesheet" href="TemperatureStyle.css">
     <script src="https://kit.fontawesome.com/cc3bc34a67.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -46,7 +46,6 @@
             <input type="radio" name="tempTypeWeek" value="celsius">
             Celsius
 
-
             <br><br>
 
             <button class="searchButton">Search <i class="fa-solid fa-magnifying-glass"></i></button>
@@ -56,46 +55,57 @@
         </form>
     </dialog>
     <main>
-        <h1>Search for Temperature by Zip Code</h1>
-
-        <label>Enter Zip Code:</label>
-        <input type="text" id="zipcode" />
-
-        <br><br>
-
-        <label>Select Temperature Measurement:</label>
-
-        <input type="radio" name="tempType" value="fahrenheit">
-        Fahrenheit
-
-        <input type="radio" name="tempType" value="celsius">
-        Celsius
-
-
-        <br><br>
-
-        <button class="searchButton" onclick="performSearch()">Search <i
-                class="fa-solid fa-magnifying-glass"></i></button>
-
-
+        <h1>Weekly Forecast Results</h1>
         <table class="resultTable">
             <tr>
-                <td>
-                    <h2 id="result"></h2>
-                </td>
+                <td></td>
+                <td>Today</td>
+                <td id="day2"></td>
+                <td id="day3"></td>
+                <td id="day4"></td>
+                <td id="day5"></td>
+                <td id="day6"></td>
+                <td id="day7"></td>
+            </tr>
+            <tr>
+                <td>High</td>
+                <td id="high0"></td>
+                <td id="high1"></td>
+                <td id="high2"></td>
+                <td id="high3"></td>
+                <td id="high4"></td>
+                <td id="high5"></td>
+                <td id="high6"></td>
+            </tr>
+            <tr>
+                <td>Current</td>
+                <td id="curr0"></td>
+                <td id="curr1"></td>
+                <td id="curr2"></td>
+                <td id="curr3"></td>
+                <td id="curr4"></td>
+                <td id="curr5"></td>
+                <td id="curr6"></td>
+            </tr>
+            <tr>
+                <td>Low</td>
+                <td id="low0"></td>
+                <td id="low1"></td>
+                <td id="low2"></td>
+                <td id="low3"></td>
+                <td id="low4"></td>
+                <td id="low5"></td>
+                <td id="low6"></td>
             </tr>
         </table>
-
-        <script src="dialogeController.js">
-        </script>
-        <script src="apiController.js"></script>
+        <h1 id="error"></h1>
     </main>
+
+    <script src="apiController.js"></script>
+    <script src="dialogeController.js"></script>
+    <script>
+        performWeeklySearch();
+    </script>
 </body>
-<footer>
-    <p>Temperature API Challenge by Diego Romero</p>
-    <p>Phone Number: (210) 606-4068</p>
-    <p><a href="mailto:diego.f.romero@icloud.com">diego.f.romero@icloud.com</a></p>
-    <p>Powered by <a href="https://www.visualcrossing.com/" target="_blank">Visual Crossing Weather API</a></p>
-</footer>
 
 </html>
